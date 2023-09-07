@@ -1,4 +1,4 @@
-- hosts: none
+- hosts: node
   become: true
   tasks:
      - name: create new deployment
