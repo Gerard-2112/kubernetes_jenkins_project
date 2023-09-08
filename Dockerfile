@@ -1,12 +1,12 @@
 FROM centos:7
-MAINTAINER gjaguilar@bilbomatica.esx
+MAINTAINER gjaguilar@bilbomatica.es
 RUN yum install -y httpd \
  zip\
  unzip
-ADD https://www.free-css.com/assets/files/free-css-templates/download/page254/photogenic.zip /var/www/html/
+ADD https://www.free-css.com/assets/files/free-css-templates/download/page285/viking.zip /var/www/html/
 WORKDIR /var/www/html/
-RUN unzip photogenic.zip
-RUN cp -rvf photogenic/* .
-RUN rm -rf photogenic photogenic.zip
+RUN unzip viking.zip
+RUN cp -rvf viking/* .
+RUN rm -rf viking viking.zip
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
-EXPOSE 80 443 
+EXPOSE 80 443
